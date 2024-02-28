@@ -48,7 +48,7 @@ spec:
         volumeMounts:
         - mountPath: /var/lib/mysql
           name: data
-  volumesClaimTemplates:
+  volumes:
   - metadata:
       name: data
     spec:
