@@ -48,12 +48,7 @@ spec:
         volumeMounts:
         - mountPath: /var/lib/mysql
           name: data
-  volumesClaimTemplates:
-  - metadata:
-      name: data
-    spec:
-      accessModes: ["ReadWriteOnce"]
-      storageClassName: "longhorn"
-      resources:
-        requests:
-          storage: 5Gi
+      volumes:
+      - name: data
+        persistentVolumeClaim:
+          claimName: mysql-pvc-rwo
