@@ -48,11 +48,11 @@ spec:
         volumeMounts:
         - mountPath: /var/lib/mysql
           name: data
-  volumes:
+  volumesClaimTemplates:
   - metadata:
       name: data
     spec:
-      accessModes: [ "ReadWriteOnce" ]
+      accessModes: ["ReadWriteOnce"]
       storageClassName: "longhorn"
       resources:
         requests:
