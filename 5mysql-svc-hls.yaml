@@ -4,11 +4,12 @@ metadata:
   name: wordpress-mysql
   namespace: wordpress
   labels:
-    app: wordpress
+    app: wp-mysql
+    tier: db
 spec:
   ports:
   - port: 3306
   selector:
-    app: wordpress
+    app: wp-mysql
     tier: db
   clusterIP: None
